@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts.chat import (
     ChatPromptTemplate,
@@ -34,4 +35,4 @@ while True:
             response = chat(messages)
             messages.append(AIMessage(content=response.content))
             tokens = cb.total_tokens
-        print(response.content)
+        print("\n" + response.content)
